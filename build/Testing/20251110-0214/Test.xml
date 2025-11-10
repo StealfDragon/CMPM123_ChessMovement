@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="Darwin-clang++"
+	BuildStamp="20251110-0214-Experimental"
+	Name="Cassians-Laptop.local"
+	Generator="ctest-4.1.2"
+	CompilerName="/usr/bin/clang++"
+	CompilerVersion="15.0.0.15000309"
+	OSName="macOS"
+	Hostname="Cassians-Laptop.local"
+	OSRelease="26.0.1"
+	OSVersion="25A362"
+	OSPlatform="arm64"
+	Is64Bits="1"
+	VendorString="Apple"
+	VendorID="Apple"
+	FamilyID="0"
+	ModelID="0"
+	ModelName="Apple M1"
+	ProcessorCacheSize="131072"
+	NumberOfLogicalCPU="8"
+	NumberOfPhysicalCPU="8"
+	TotalVirtualMemory="10240"
+	TotalPhysicalMemory="8192"
+	LogicalProcessorsPerPhysical="8"
+	ProcessorClockFrequency="0"
+	>
+	<Testing>
+		<StartDateTime>Nov 09 18:14 PST</StartDateTime>
+		<StartTestTime>1762740896</StartTestTime>
+		<TestList/>
+		<EndDateTime>Nov 09 18:14 PST</EndDateTime>
+		<EndTestTime>1762740896</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>
