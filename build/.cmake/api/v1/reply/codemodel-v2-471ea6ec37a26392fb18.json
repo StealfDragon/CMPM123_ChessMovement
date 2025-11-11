@@ -9,7 +9,7 @@
 					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.5.0"
+						"string" : "4.0.0"
 					},
 					"projectIndex" : 0,
 					"source" : ".",

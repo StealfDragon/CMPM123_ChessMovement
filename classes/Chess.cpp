@@ -1,6 +1,10 @@
 #include "Chess.h"
 #include <limits>
 #include <cmath>
+#include <sstream>
+#include <iostream>
+#include <string>
+#include <vector>
 
 Chess::Chess()
 {
@@ -61,6 +65,14 @@ void Chess::FENtoBoard(const std::string& fen) {
     // 3: castling availability (KQkq or -)
     // 4: en passant target square (in algebraic notation, or -)
     // 5: halfmove clock (number of halfmoves since the last capture or pawn advance)
+
+    std::stringstream fenS(fen);
+    std::string row;
+    std::vector <std::string> board;
+    while(std::getline(fenS, row, '/')) {
+        board.push_back(row);
+    }
+    
 }
 
 bool Chess::actionForEmptyHolder(BitHolder &holder)
