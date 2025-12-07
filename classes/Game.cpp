@@ -149,26 +149,44 @@ void Game::scanForMouse()
 void Game::findDropTarget(ImVec2 &pos)
 {
 	Grid* grid = getGrid();
-	grid->forEachEnabledSquare([&](ChessSquare* square, int x, int y) {
-		if (square == _oldHolder)
-		{
-			return;
-		}
-		if (square->isMouseOver(pos))
-		{
-			if (_dropTarget && square != _dropTarget)
-			{
-				_dropTarget->willNotDropBit(_dragBit);
-				_dropTarget->setHighlighted(false);
-				_dropTarget = nullptr;
-			}
-			if (_oldHolder && square->canDropBitAtPoint(_dragBit, pos) && canBitMoveFromTo(*_dragBit, *_oldHolder, *square))
-			{
-				_dropTarget = square;
-				_dropTarget->setHighlighted(true);
-			}
-		}
-	});
+    grid->forEachEnabledSquare([&](ChessSquare* square, int x, int y) {
+        // Special-case the origin square: if the mouse is over the original holder,
+        // prefer the original holder as the drop target. This ensures dropping
+        // back onto the same square behaves like a cancel/snap-back instead of
+        // accidentally selecting a neighboring square.
+        if (square == _oldHolder)
+        {
+            if (square->isMouseOver(pos))
+            {
+                if (_dropTarget && square != _dropTarget)
+                {
+                    _dropTarget->willNotDropBit(_dragBit);
+                    _dropTarget->setHighlighted(false);
+                }
+                _dropTarget = square;
+                _dropTarget->setHighlighted(true);
+            }
+            // return from the lambda to continue scanning other squares
+            return;
+        }
+
+        if (square->isMouseOver(pos))
+        {
+            if (_dropTarget && square != _dropTarget)
+            {
+                _dropTarget->willNotDropBit(_dragBit);
+                _dropTarget->setHighlighted(false);
+                _dropTarget = nullptr;
+            }
+            // Only mark a non-origin square as a candidate if the holder allows a drop
+            // and the move generator says the move is legal.
+            if (square->canDropBitAtPoint(_dragBit, pos) && canBitMoveFromTo(*_dragBit, *_oldHolder, *square))
+            {
+                _dropTarget = square;
+                _dropTarget->setHighlighted(true);
+            }
+        }
+    });
 }
 
 //

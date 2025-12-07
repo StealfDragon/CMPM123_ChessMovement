@@ -2,6 +2,8 @@
 
 #include "Game.h"
 #include "Grid.h"
+#include <vector>
+#include "ChessSquare.h"
 
 constexpr int pieceSize = 80;
 
@@ -14,6 +16,16 @@ enum ChessPiece
     Rook,
     Queen,
     King
+};
+
+struct Move
+{
+    public: 
+        int startSquare; // might have to add const later
+        int targetSquare;
+
+        Move() : startSquare(-1), targetSquare(-1) {}
+        Move(int s, int t) : startSquare(s), targetSquare(t) {}
 };
 
 class Chess : public Game
@@ -38,6 +50,10 @@ public:
     void setStateString(const std::string &s) override;
 
     Grid* getGrid() override { return _grid; }
+
+    std::vector<Move> moves;
+    std::vector<Move> GenerateMoves();
+
 
 private:
     Bit* PieceForPlayer(const int playerNumber, ChessPiece piece);

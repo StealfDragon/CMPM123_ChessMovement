@@ -53,10 +53,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/Cassian/School_Local/CMPM_123/Week6/chess-base
+CMAKE_SOURCE_DIR = /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/build
+CMAKE_BINARY_DIR = /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/demo.dir/depend.make
@@ -73,298 +73,298 @@ CMakeFiles/demo.dir/codegen:
 .PHONY : CMakeFiles/demo.dir/codegen
 
 CMakeFiles/demo.dir/Application.cpp.o: CMakeFiles/demo.dir/flags.make
-CMakeFiles/demo.dir/Application.cpp.o: /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/Application.cpp
+CMakeFiles/demo.dir/Application.cpp.o: /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/Application.cpp
 CMakeFiles/demo.dir/Application.cpp.o: CMakeFiles/demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/Cassian/School_Local/CMPM_123/Week6/chess-base/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/demo.dir/Application.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/Application.cpp.o -MF CMakeFiles/demo.dir/Application.cpp.o.d -o CMakeFiles/demo.dir/Application.cpp.o -c /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/Application.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/demo.dir/Application.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/Application.cpp.o -MF CMakeFiles/demo.dir/Application.cpp.o.d -o CMakeFiles/demo.dir/Application.cpp.o -c /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/Application.cpp
 
 CMakeFiles/demo.dir/Application.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/demo.dir/Application.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/Application.cpp > CMakeFiles/demo.dir/Application.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/Application.cpp > CMakeFiles/demo.dir/Application.cpp.i
 
 CMakeFiles/demo.dir/Application.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/demo.dir/Application.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/Application.cpp -o CMakeFiles/demo.dir/Application.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/Application.cpp -o CMakeFiles/demo.dir/Application.cpp.s
 
 CMakeFiles/demo.dir/imgui/imgui_demo.cpp.o: CMakeFiles/demo.dir/flags.make
-CMakeFiles/demo.dir/imgui/imgui_demo.cpp.o: /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/imgui/imgui_demo.cpp
+CMakeFiles/demo.dir/imgui/imgui_demo.cpp.o: /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/imgui/imgui_demo.cpp
 CMakeFiles/demo.dir/imgui/imgui_demo.cpp.o: CMakeFiles/demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/Cassian/School_Local/CMPM_123/Week6/chess-base/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/demo.dir/imgui/imgui_demo.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/imgui/imgui_demo.cpp.o -MF CMakeFiles/demo.dir/imgui/imgui_demo.cpp.o.d -o CMakeFiles/demo.dir/imgui/imgui_demo.cpp.o -c /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/imgui/imgui_demo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/demo.dir/imgui/imgui_demo.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/imgui/imgui_demo.cpp.o -MF CMakeFiles/demo.dir/imgui/imgui_demo.cpp.o.d -o CMakeFiles/demo.dir/imgui/imgui_demo.cpp.o -c /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/imgui/imgui_demo.cpp
 
 CMakeFiles/demo.dir/imgui/imgui_demo.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/demo.dir/imgui/imgui_demo.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/imgui/imgui_demo.cpp > CMakeFiles/demo.dir/imgui/imgui_demo.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/imgui/imgui_demo.cpp > CMakeFiles/demo.dir/imgui/imgui_demo.cpp.i
 
 CMakeFiles/demo.dir/imgui/imgui_demo.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/demo.dir/imgui/imgui_demo.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/imgui/imgui_demo.cpp -o CMakeFiles/demo.dir/imgui/imgui_demo.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/imgui/imgui_demo.cpp -o CMakeFiles/demo.dir/imgui/imgui_demo.cpp.s
 
 CMakeFiles/demo.dir/imgui/imgui_draw.cpp.o: CMakeFiles/demo.dir/flags.make
-CMakeFiles/demo.dir/imgui/imgui_draw.cpp.o: /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/imgui/imgui_draw.cpp
+CMakeFiles/demo.dir/imgui/imgui_draw.cpp.o: /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/imgui/imgui_draw.cpp
 CMakeFiles/demo.dir/imgui/imgui_draw.cpp.o: CMakeFiles/demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/Cassian/School_Local/CMPM_123/Week6/chess-base/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/demo.dir/imgui/imgui_draw.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/imgui/imgui_draw.cpp.o -MF CMakeFiles/demo.dir/imgui/imgui_draw.cpp.o.d -o CMakeFiles/demo.dir/imgui/imgui_draw.cpp.o -c /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/imgui/imgui_draw.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/demo.dir/imgui/imgui_draw.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/imgui/imgui_draw.cpp.o -MF CMakeFiles/demo.dir/imgui/imgui_draw.cpp.o.d -o CMakeFiles/demo.dir/imgui/imgui_draw.cpp.o -c /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/imgui/imgui_draw.cpp
 
 CMakeFiles/demo.dir/imgui/imgui_draw.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/demo.dir/imgui/imgui_draw.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/imgui/imgui_draw.cpp > CMakeFiles/demo.dir/imgui/imgui_draw.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/imgui/imgui_draw.cpp > CMakeFiles/demo.dir/imgui/imgui_draw.cpp.i
 
 CMakeFiles/demo.dir/imgui/imgui_draw.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/demo.dir/imgui/imgui_draw.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/imgui/imgui_draw.cpp -o CMakeFiles/demo.dir/imgui/imgui_draw.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/imgui/imgui_draw.cpp -o CMakeFiles/demo.dir/imgui/imgui_draw.cpp.s
 
 CMakeFiles/demo.dir/imgui/imgui_tables.cpp.o: CMakeFiles/demo.dir/flags.make
-CMakeFiles/demo.dir/imgui/imgui_tables.cpp.o: /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/imgui/imgui_tables.cpp
+CMakeFiles/demo.dir/imgui/imgui_tables.cpp.o: /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/imgui/imgui_tables.cpp
 CMakeFiles/demo.dir/imgui/imgui_tables.cpp.o: CMakeFiles/demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/Cassian/School_Local/CMPM_123/Week6/chess-base/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/demo.dir/imgui/imgui_tables.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/imgui/imgui_tables.cpp.o -MF CMakeFiles/demo.dir/imgui/imgui_tables.cpp.o.d -o CMakeFiles/demo.dir/imgui/imgui_tables.cpp.o -c /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/imgui/imgui_tables.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/demo.dir/imgui/imgui_tables.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/imgui/imgui_tables.cpp.o -MF CMakeFiles/demo.dir/imgui/imgui_tables.cpp.o.d -o CMakeFiles/demo.dir/imgui/imgui_tables.cpp.o -c /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/imgui/imgui_tables.cpp
 
 CMakeFiles/demo.dir/imgui/imgui_tables.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/demo.dir/imgui/imgui_tables.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/imgui/imgui_tables.cpp > CMakeFiles/demo.dir/imgui/imgui_tables.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/imgui/imgui_tables.cpp > CMakeFiles/demo.dir/imgui/imgui_tables.cpp.i
 
 CMakeFiles/demo.dir/imgui/imgui_tables.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/demo.dir/imgui/imgui_tables.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/imgui/imgui_tables.cpp -o CMakeFiles/demo.dir/imgui/imgui_tables.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/imgui/imgui_tables.cpp -o CMakeFiles/demo.dir/imgui/imgui_tables.cpp.s
 
 CMakeFiles/demo.dir/imgui/imgui_widgets.cpp.o: CMakeFiles/demo.dir/flags.make
-CMakeFiles/demo.dir/imgui/imgui_widgets.cpp.o: /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/imgui/imgui_widgets.cpp
+CMakeFiles/demo.dir/imgui/imgui_widgets.cpp.o: /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/imgui/imgui_widgets.cpp
 CMakeFiles/demo.dir/imgui/imgui_widgets.cpp.o: CMakeFiles/demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/Cassian/School_Local/CMPM_123/Week6/chess-base/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/demo.dir/imgui/imgui_widgets.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/imgui/imgui_widgets.cpp.o -MF CMakeFiles/demo.dir/imgui/imgui_widgets.cpp.o.d -o CMakeFiles/demo.dir/imgui/imgui_widgets.cpp.o -c /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/imgui/imgui_widgets.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/demo.dir/imgui/imgui_widgets.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/imgui/imgui_widgets.cpp.o -MF CMakeFiles/demo.dir/imgui/imgui_widgets.cpp.o.d -o CMakeFiles/demo.dir/imgui/imgui_widgets.cpp.o -c /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/imgui/imgui_widgets.cpp
 
 CMakeFiles/demo.dir/imgui/imgui_widgets.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/demo.dir/imgui/imgui_widgets.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/imgui/imgui_widgets.cpp > CMakeFiles/demo.dir/imgui/imgui_widgets.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/imgui/imgui_widgets.cpp > CMakeFiles/demo.dir/imgui/imgui_widgets.cpp.i
 
 CMakeFiles/demo.dir/imgui/imgui_widgets.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/demo.dir/imgui/imgui_widgets.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/imgui/imgui_widgets.cpp -o CMakeFiles/demo.dir/imgui/imgui_widgets.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/imgui/imgui_widgets.cpp -o CMakeFiles/demo.dir/imgui/imgui_widgets.cpp.s
 
 CMakeFiles/demo.dir/imgui/imgui.cpp.o: CMakeFiles/demo.dir/flags.make
-CMakeFiles/demo.dir/imgui/imgui.cpp.o: /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/imgui/imgui.cpp
+CMakeFiles/demo.dir/imgui/imgui.cpp.o: /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/imgui/imgui.cpp
 CMakeFiles/demo.dir/imgui/imgui.cpp.o: CMakeFiles/demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/Cassian/School_Local/CMPM_123/Week6/chess-base/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/demo.dir/imgui/imgui.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/imgui/imgui.cpp.o -MF CMakeFiles/demo.dir/imgui/imgui.cpp.o.d -o CMakeFiles/demo.dir/imgui/imgui.cpp.o -c /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/imgui/imgui.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/demo.dir/imgui/imgui.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/imgui/imgui.cpp.o -MF CMakeFiles/demo.dir/imgui/imgui.cpp.o.d -o CMakeFiles/demo.dir/imgui/imgui.cpp.o -c /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/imgui/imgui.cpp
 
 CMakeFiles/demo.dir/imgui/imgui.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/demo.dir/imgui/imgui.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/imgui/imgui.cpp > CMakeFiles/demo.dir/imgui/imgui.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/imgui/imgui.cpp > CMakeFiles/demo.dir/imgui/imgui.cpp.i
 
 CMakeFiles/demo.dir/imgui/imgui.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/demo.dir/imgui/imgui.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/imgui/imgui.cpp -o CMakeFiles/demo.dir/imgui/imgui.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/imgui/imgui.cpp -o CMakeFiles/demo.dir/imgui/imgui.cpp.s
 
 CMakeFiles/demo.dir/classes/Bit.cpp.o: CMakeFiles/demo.dir/flags.make
-CMakeFiles/demo.dir/classes/Bit.cpp.o: /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/Bit.cpp
+CMakeFiles/demo.dir/classes/Bit.cpp.o: /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/Bit.cpp
 CMakeFiles/demo.dir/classes/Bit.cpp.o: CMakeFiles/demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/Cassian/School_Local/CMPM_123/Week6/chess-base/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/demo.dir/classes/Bit.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/classes/Bit.cpp.o -MF CMakeFiles/demo.dir/classes/Bit.cpp.o.d -o CMakeFiles/demo.dir/classes/Bit.cpp.o -c /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/Bit.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/demo.dir/classes/Bit.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/classes/Bit.cpp.o -MF CMakeFiles/demo.dir/classes/Bit.cpp.o.d -o CMakeFiles/demo.dir/classes/Bit.cpp.o -c /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/Bit.cpp
 
 CMakeFiles/demo.dir/classes/Bit.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/demo.dir/classes/Bit.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/Bit.cpp > CMakeFiles/demo.dir/classes/Bit.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/Bit.cpp > CMakeFiles/demo.dir/classes/Bit.cpp.i
 
 CMakeFiles/demo.dir/classes/Bit.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/demo.dir/classes/Bit.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/Bit.cpp -o CMakeFiles/demo.dir/classes/Bit.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/Bit.cpp -o CMakeFiles/demo.dir/classes/Bit.cpp.s
 
 CMakeFiles/demo.dir/classes/BitHolder.cpp.o: CMakeFiles/demo.dir/flags.make
-CMakeFiles/demo.dir/classes/BitHolder.cpp.o: /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/BitHolder.cpp
+CMakeFiles/demo.dir/classes/BitHolder.cpp.o: /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/BitHolder.cpp
 CMakeFiles/demo.dir/classes/BitHolder.cpp.o: CMakeFiles/demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/Cassian/School_Local/CMPM_123/Week6/chess-base/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/demo.dir/classes/BitHolder.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/classes/BitHolder.cpp.o -MF CMakeFiles/demo.dir/classes/BitHolder.cpp.o.d -o CMakeFiles/demo.dir/classes/BitHolder.cpp.o -c /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/BitHolder.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/demo.dir/classes/BitHolder.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/classes/BitHolder.cpp.o -MF CMakeFiles/demo.dir/classes/BitHolder.cpp.o.d -o CMakeFiles/demo.dir/classes/BitHolder.cpp.o -c /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/BitHolder.cpp
 
 CMakeFiles/demo.dir/classes/BitHolder.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/demo.dir/classes/BitHolder.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/BitHolder.cpp > CMakeFiles/demo.dir/classes/BitHolder.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/BitHolder.cpp > CMakeFiles/demo.dir/classes/BitHolder.cpp.i
 
 CMakeFiles/demo.dir/classes/BitHolder.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/demo.dir/classes/BitHolder.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/BitHolder.cpp -o CMakeFiles/demo.dir/classes/BitHolder.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/BitHolder.cpp -o CMakeFiles/demo.dir/classes/BitHolder.cpp.s
 
 CMakeFiles/demo.dir/classes/Game.cpp.o: CMakeFiles/demo.dir/flags.make
-CMakeFiles/demo.dir/classes/Game.cpp.o: /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/Game.cpp
+CMakeFiles/demo.dir/classes/Game.cpp.o: /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/Game.cpp
 CMakeFiles/demo.dir/classes/Game.cpp.o: CMakeFiles/demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/Cassian/School_Local/CMPM_123/Week6/chess-base/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/demo.dir/classes/Game.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/classes/Game.cpp.o -MF CMakeFiles/demo.dir/classes/Game.cpp.o.d -o CMakeFiles/demo.dir/classes/Game.cpp.o -c /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/Game.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/demo.dir/classes/Game.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/classes/Game.cpp.o -MF CMakeFiles/demo.dir/classes/Game.cpp.o.d -o CMakeFiles/demo.dir/classes/Game.cpp.o -c /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/Game.cpp
 
 CMakeFiles/demo.dir/classes/Game.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/demo.dir/classes/Game.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/Game.cpp > CMakeFiles/demo.dir/classes/Game.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/Game.cpp > CMakeFiles/demo.dir/classes/Game.cpp.i
 
 CMakeFiles/demo.dir/classes/Game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/demo.dir/classes/Game.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/Game.cpp -o CMakeFiles/demo.dir/classes/Game.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/Game.cpp -o CMakeFiles/demo.dir/classes/Game.cpp.s
 
 CMakeFiles/demo.dir/classes/Sprite.cpp.o: CMakeFiles/demo.dir/flags.make
-CMakeFiles/demo.dir/classes/Sprite.cpp.o: /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/Sprite.cpp
+CMakeFiles/demo.dir/classes/Sprite.cpp.o: /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/Sprite.cpp
 CMakeFiles/demo.dir/classes/Sprite.cpp.o: CMakeFiles/demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/Cassian/School_Local/CMPM_123/Week6/chess-base/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/demo.dir/classes/Sprite.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/classes/Sprite.cpp.o -MF CMakeFiles/demo.dir/classes/Sprite.cpp.o.d -o CMakeFiles/demo.dir/classes/Sprite.cpp.o -c /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/Sprite.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/demo.dir/classes/Sprite.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/classes/Sprite.cpp.o -MF CMakeFiles/demo.dir/classes/Sprite.cpp.o.d -o CMakeFiles/demo.dir/classes/Sprite.cpp.o -c /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/Sprite.cpp
 
 CMakeFiles/demo.dir/classes/Sprite.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/demo.dir/classes/Sprite.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/Sprite.cpp > CMakeFiles/demo.dir/classes/Sprite.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/Sprite.cpp > CMakeFiles/demo.dir/classes/Sprite.cpp.i
 
 CMakeFiles/demo.dir/classes/Sprite.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/demo.dir/classes/Sprite.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/Sprite.cpp -o CMakeFiles/demo.dir/classes/Sprite.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/Sprite.cpp -o CMakeFiles/demo.dir/classes/Sprite.cpp.s
 
 CMakeFiles/demo.dir/classes/Square.cpp.o: CMakeFiles/demo.dir/flags.make
-CMakeFiles/demo.dir/classes/Square.cpp.o: /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/Square.cpp
+CMakeFiles/demo.dir/classes/Square.cpp.o: /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/Square.cpp
 CMakeFiles/demo.dir/classes/Square.cpp.o: CMakeFiles/demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/Cassian/School_Local/CMPM_123/Week6/chess-base/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/demo.dir/classes/Square.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/classes/Square.cpp.o -MF CMakeFiles/demo.dir/classes/Square.cpp.o.d -o CMakeFiles/demo.dir/classes/Square.cpp.o -c /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/Square.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/demo.dir/classes/Square.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/classes/Square.cpp.o -MF CMakeFiles/demo.dir/classes/Square.cpp.o.d -o CMakeFiles/demo.dir/classes/Square.cpp.o -c /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/Square.cpp
 
 CMakeFiles/demo.dir/classes/Square.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/demo.dir/classes/Square.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/Square.cpp > CMakeFiles/demo.dir/classes/Square.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/Square.cpp > CMakeFiles/demo.dir/classes/Square.cpp.i
 
 CMakeFiles/demo.dir/classes/Square.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/demo.dir/classes/Square.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/Square.cpp -o CMakeFiles/demo.dir/classes/Square.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/Square.cpp -o CMakeFiles/demo.dir/classes/Square.cpp.s
 
 CMakeFiles/demo.dir/classes/ChessSquare.cpp.o: CMakeFiles/demo.dir/flags.make
-CMakeFiles/demo.dir/classes/ChessSquare.cpp.o: /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/ChessSquare.cpp
+CMakeFiles/demo.dir/classes/ChessSquare.cpp.o: /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/ChessSquare.cpp
 CMakeFiles/demo.dir/classes/ChessSquare.cpp.o: CMakeFiles/demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/Cassian/School_Local/CMPM_123/Week6/chess-base/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/demo.dir/classes/ChessSquare.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/classes/ChessSquare.cpp.o -MF CMakeFiles/demo.dir/classes/ChessSquare.cpp.o.d -o CMakeFiles/demo.dir/classes/ChessSquare.cpp.o -c /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/ChessSquare.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/demo.dir/classes/ChessSquare.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/classes/ChessSquare.cpp.o -MF CMakeFiles/demo.dir/classes/ChessSquare.cpp.o.d -o CMakeFiles/demo.dir/classes/ChessSquare.cpp.o -c /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/ChessSquare.cpp
 
 CMakeFiles/demo.dir/classes/ChessSquare.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/demo.dir/classes/ChessSquare.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/ChessSquare.cpp > CMakeFiles/demo.dir/classes/ChessSquare.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/ChessSquare.cpp > CMakeFiles/demo.dir/classes/ChessSquare.cpp.i
 
 CMakeFiles/demo.dir/classes/ChessSquare.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/demo.dir/classes/ChessSquare.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/ChessSquare.cpp -o CMakeFiles/demo.dir/classes/ChessSquare.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/ChessSquare.cpp -o CMakeFiles/demo.dir/classes/ChessSquare.cpp.s
 
 CMakeFiles/demo.dir/classes/Grid.cpp.o: CMakeFiles/demo.dir/flags.make
-CMakeFiles/demo.dir/classes/Grid.cpp.o: /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/Grid.cpp
+CMakeFiles/demo.dir/classes/Grid.cpp.o: /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/Grid.cpp
 CMakeFiles/demo.dir/classes/Grid.cpp.o: CMakeFiles/demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/Cassian/School_Local/CMPM_123/Week6/chess-base/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/demo.dir/classes/Grid.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/classes/Grid.cpp.o -MF CMakeFiles/demo.dir/classes/Grid.cpp.o.d -o CMakeFiles/demo.dir/classes/Grid.cpp.o -c /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/Grid.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/demo.dir/classes/Grid.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/classes/Grid.cpp.o -MF CMakeFiles/demo.dir/classes/Grid.cpp.o.d -o CMakeFiles/demo.dir/classes/Grid.cpp.o -c /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/Grid.cpp
 
 CMakeFiles/demo.dir/classes/Grid.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/demo.dir/classes/Grid.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/Grid.cpp > CMakeFiles/demo.dir/classes/Grid.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/Grid.cpp > CMakeFiles/demo.dir/classes/Grid.cpp.i
 
 CMakeFiles/demo.dir/classes/Grid.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/demo.dir/classes/Grid.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/Grid.cpp -o CMakeFiles/demo.dir/classes/Grid.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/Grid.cpp -o CMakeFiles/demo.dir/classes/Grid.cpp.s
 
 CMakeFiles/demo.dir/classes/TicTacToe.cpp.o: CMakeFiles/demo.dir/flags.make
-CMakeFiles/demo.dir/classes/TicTacToe.cpp.o: /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/TicTacToe.cpp
+CMakeFiles/demo.dir/classes/TicTacToe.cpp.o: /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/TicTacToe.cpp
 CMakeFiles/demo.dir/classes/TicTacToe.cpp.o: CMakeFiles/demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/Cassian/School_Local/CMPM_123/Week6/chess-base/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/demo.dir/classes/TicTacToe.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/classes/TicTacToe.cpp.o -MF CMakeFiles/demo.dir/classes/TicTacToe.cpp.o.d -o CMakeFiles/demo.dir/classes/TicTacToe.cpp.o -c /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/TicTacToe.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/demo.dir/classes/TicTacToe.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/classes/TicTacToe.cpp.o -MF CMakeFiles/demo.dir/classes/TicTacToe.cpp.o.d -o CMakeFiles/demo.dir/classes/TicTacToe.cpp.o -c /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/TicTacToe.cpp
 
 CMakeFiles/demo.dir/classes/TicTacToe.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/demo.dir/classes/TicTacToe.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/TicTacToe.cpp > CMakeFiles/demo.dir/classes/TicTacToe.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/TicTacToe.cpp > CMakeFiles/demo.dir/classes/TicTacToe.cpp.i
 
 CMakeFiles/demo.dir/classes/TicTacToe.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/demo.dir/classes/TicTacToe.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/TicTacToe.cpp -o CMakeFiles/demo.dir/classes/TicTacToe.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/TicTacToe.cpp -o CMakeFiles/demo.dir/classes/TicTacToe.cpp.s
 
 CMakeFiles/demo.dir/classes/Checkers.cpp.o: CMakeFiles/demo.dir/flags.make
-CMakeFiles/demo.dir/classes/Checkers.cpp.o: /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/Checkers.cpp
+CMakeFiles/demo.dir/classes/Checkers.cpp.o: /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/Checkers.cpp
 CMakeFiles/demo.dir/classes/Checkers.cpp.o: CMakeFiles/demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/Cassian/School_Local/CMPM_123/Week6/chess-base/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/demo.dir/classes/Checkers.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/classes/Checkers.cpp.o -MF CMakeFiles/demo.dir/classes/Checkers.cpp.o.d -o CMakeFiles/demo.dir/classes/Checkers.cpp.o -c /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/Checkers.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/demo.dir/classes/Checkers.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/classes/Checkers.cpp.o -MF CMakeFiles/demo.dir/classes/Checkers.cpp.o.d -o CMakeFiles/demo.dir/classes/Checkers.cpp.o -c /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/Checkers.cpp
 
 CMakeFiles/demo.dir/classes/Checkers.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/demo.dir/classes/Checkers.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/Checkers.cpp > CMakeFiles/demo.dir/classes/Checkers.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/Checkers.cpp > CMakeFiles/demo.dir/classes/Checkers.cpp.i
 
 CMakeFiles/demo.dir/classes/Checkers.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/demo.dir/classes/Checkers.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/Checkers.cpp -o CMakeFiles/demo.dir/classes/Checkers.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/Checkers.cpp -o CMakeFiles/demo.dir/classes/Checkers.cpp.s
 
 CMakeFiles/demo.dir/classes/Othello.cpp.o: CMakeFiles/demo.dir/flags.make
-CMakeFiles/demo.dir/classes/Othello.cpp.o: /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/Othello.cpp
+CMakeFiles/demo.dir/classes/Othello.cpp.o: /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/Othello.cpp
 CMakeFiles/demo.dir/classes/Othello.cpp.o: CMakeFiles/demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/Cassian/School_Local/CMPM_123/Week6/chess-base/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/demo.dir/classes/Othello.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/classes/Othello.cpp.o -MF CMakeFiles/demo.dir/classes/Othello.cpp.o.d -o CMakeFiles/demo.dir/classes/Othello.cpp.o -c /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/Othello.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/demo.dir/classes/Othello.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/classes/Othello.cpp.o -MF CMakeFiles/demo.dir/classes/Othello.cpp.o.d -o CMakeFiles/demo.dir/classes/Othello.cpp.o -c /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/Othello.cpp
 
 CMakeFiles/demo.dir/classes/Othello.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/demo.dir/classes/Othello.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/Othello.cpp > CMakeFiles/demo.dir/classes/Othello.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/Othello.cpp > CMakeFiles/demo.dir/classes/Othello.cpp.i
 
 CMakeFiles/demo.dir/classes/Othello.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/demo.dir/classes/Othello.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/Othello.cpp -o CMakeFiles/demo.dir/classes/Othello.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/Othello.cpp -o CMakeFiles/demo.dir/classes/Othello.cpp.s
 
 CMakeFiles/demo.dir/classes/Connect4.cpp.o: CMakeFiles/demo.dir/flags.make
-CMakeFiles/demo.dir/classes/Connect4.cpp.o: /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/Connect4.cpp
+CMakeFiles/demo.dir/classes/Connect4.cpp.o: /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/Connect4.cpp
 CMakeFiles/demo.dir/classes/Connect4.cpp.o: CMakeFiles/demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/Cassian/School_Local/CMPM_123/Week6/chess-base/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/demo.dir/classes/Connect4.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/classes/Connect4.cpp.o -MF CMakeFiles/demo.dir/classes/Connect4.cpp.o.d -o CMakeFiles/demo.dir/classes/Connect4.cpp.o -c /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/Connect4.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/demo.dir/classes/Connect4.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/classes/Connect4.cpp.o -MF CMakeFiles/demo.dir/classes/Connect4.cpp.o.d -o CMakeFiles/demo.dir/classes/Connect4.cpp.o -c /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/Connect4.cpp
 
 CMakeFiles/demo.dir/classes/Connect4.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/demo.dir/classes/Connect4.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/Connect4.cpp > CMakeFiles/demo.dir/classes/Connect4.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/Connect4.cpp > CMakeFiles/demo.dir/classes/Connect4.cpp.i
 
 CMakeFiles/demo.dir/classes/Connect4.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/demo.dir/classes/Connect4.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/Connect4.cpp -o CMakeFiles/demo.dir/classes/Connect4.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/Connect4.cpp -o CMakeFiles/demo.dir/classes/Connect4.cpp.s
 
 CMakeFiles/demo.dir/classes/Chess.cpp.o: CMakeFiles/demo.dir/flags.make
-CMakeFiles/demo.dir/classes/Chess.cpp.o: /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/Chess.cpp
+CMakeFiles/demo.dir/classes/Chess.cpp.o: /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/Chess.cpp
 CMakeFiles/demo.dir/classes/Chess.cpp.o: CMakeFiles/demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/Cassian/School_Local/CMPM_123/Week6/chess-base/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/demo.dir/classes/Chess.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/classes/Chess.cpp.o -MF CMakeFiles/demo.dir/classes/Chess.cpp.o.d -o CMakeFiles/demo.dir/classes/Chess.cpp.o -c /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/Chess.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/demo.dir/classes/Chess.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/classes/Chess.cpp.o -MF CMakeFiles/demo.dir/classes/Chess.cpp.o.d -o CMakeFiles/demo.dir/classes/Chess.cpp.o -c /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/Chess.cpp
 
 CMakeFiles/demo.dir/classes/Chess.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/demo.dir/classes/Chess.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/Chess.cpp > CMakeFiles/demo.dir/classes/Chess.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/Chess.cpp > CMakeFiles/demo.dir/classes/Chess.cpp.i
 
 CMakeFiles/demo.dir/classes/Chess.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/demo.dir/classes/Chess.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/Chess.cpp -o CMakeFiles/demo.dir/classes/Chess.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/Chess.cpp -o CMakeFiles/demo.dir/classes/Chess.cpp.s
 
 CMakeFiles/demo.dir/imgui/imgui_impl_opengl3.cpp.o: CMakeFiles/demo.dir/flags.make
-CMakeFiles/demo.dir/imgui/imgui_impl_opengl3.cpp.o: /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/imgui/imgui_impl_opengl3.cpp
+CMakeFiles/demo.dir/imgui/imgui_impl_opengl3.cpp.o: /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/imgui/imgui_impl_opengl3.cpp
 CMakeFiles/demo.dir/imgui/imgui_impl_opengl3.cpp.o: CMakeFiles/demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/Cassian/School_Local/CMPM_123/Week6/chess-base/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/demo.dir/imgui/imgui_impl_opengl3.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/imgui/imgui_impl_opengl3.cpp.o -MF CMakeFiles/demo.dir/imgui/imgui_impl_opengl3.cpp.o.d -o CMakeFiles/demo.dir/imgui/imgui_impl_opengl3.cpp.o -c /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/imgui/imgui_impl_opengl3.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/demo.dir/imgui/imgui_impl_opengl3.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/imgui/imgui_impl_opengl3.cpp.o -MF CMakeFiles/demo.dir/imgui/imgui_impl_opengl3.cpp.o.d -o CMakeFiles/demo.dir/imgui/imgui_impl_opengl3.cpp.o -c /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/imgui/imgui_impl_opengl3.cpp
 
 CMakeFiles/demo.dir/imgui/imgui_impl_opengl3.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/demo.dir/imgui/imgui_impl_opengl3.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/imgui/imgui_impl_opengl3.cpp > CMakeFiles/demo.dir/imgui/imgui_impl_opengl3.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/imgui/imgui_impl_opengl3.cpp > CMakeFiles/demo.dir/imgui/imgui_impl_opengl3.cpp.i
 
 CMakeFiles/demo.dir/imgui/imgui_impl_opengl3.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/demo.dir/imgui/imgui_impl_opengl3.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/imgui/imgui_impl_opengl3.cpp -o CMakeFiles/demo.dir/imgui/imgui_impl_opengl3.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/imgui/imgui_impl_opengl3.cpp -o CMakeFiles/demo.dir/imgui/imgui_impl_opengl3.cpp.s
 
 CMakeFiles/demo.dir/main_macos.cpp.o: CMakeFiles/demo.dir/flags.make
-CMakeFiles/demo.dir/main_macos.cpp.o: /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/main_macos.cpp
+CMakeFiles/demo.dir/main_macos.cpp.o: /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/main_macos.cpp
 CMakeFiles/demo.dir/main_macos.cpp.o: CMakeFiles/demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/Cassian/School_Local/CMPM_123/Week6/chess-base/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/demo.dir/main_macos.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/main_macos.cpp.o -MF CMakeFiles/demo.dir/main_macos.cpp.o.d -o CMakeFiles/demo.dir/main_macos.cpp.o -c /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/main_macos.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/demo.dir/main_macos.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/main_macos.cpp.o -MF CMakeFiles/demo.dir/main_macos.cpp.o.d -o CMakeFiles/demo.dir/main_macos.cpp.o -c /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/main_macos.cpp
 
 CMakeFiles/demo.dir/main_macos.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/demo.dir/main_macos.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/main_macos.cpp > CMakeFiles/demo.dir/main_macos.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/main_macos.cpp > CMakeFiles/demo.dir/main_macos.cpp.i
 
 CMakeFiles/demo.dir/main_macos.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/demo.dir/main_macos.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/main_macos.cpp -o CMakeFiles/demo.dir/main_macos.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/main_macos.cpp -o CMakeFiles/demo.dir/main_macos.cpp.s
 
 CMakeFiles/demo.dir/imgui/imgui_impl_glfw.cpp.o: CMakeFiles/demo.dir/flags.make
-CMakeFiles/demo.dir/imgui/imgui_impl_glfw.cpp.o: /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/imgui/imgui_impl_glfw.cpp
+CMakeFiles/demo.dir/imgui/imgui_impl_glfw.cpp.o: /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/imgui/imgui_impl_glfw.cpp
 CMakeFiles/demo.dir/imgui/imgui_impl_glfw.cpp.o: CMakeFiles/demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/Cassian/School_Local/CMPM_123/Week6/chess-base/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/demo.dir/imgui/imgui_impl_glfw.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/imgui/imgui_impl_glfw.cpp.o -MF CMakeFiles/demo.dir/imgui/imgui_impl_glfw.cpp.o.d -o CMakeFiles/demo.dir/imgui/imgui_impl_glfw.cpp.o -c /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/imgui/imgui_impl_glfw.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/demo.dir/imgui/imgui_impl_glfw.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/imgui/imgui_impl_glfw.cpp.o -MF CMakeFiles/demo.dir/imgui/imgui_impl_glfw.cpp.o.d -o CMakeFiles/demo.dir/imgui/imgui_impl_glfw.cpp.o -c /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/imgui/imgui_impl_glfw.cpp
 
 CMakeFiles/demo.dir/imgui/imgui_impl_glfw.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/demo.dir/imgui/imgui_impl_glfw.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/imgui/imgui_impl_glfw.cpp > CMakeFiles/demo.dir/imgui/imgui_impl_glfw.cpp.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/imgui/imgui_impl_glfw.cpp > CMakeFiles/demo.dir/imgui/imgui_impl_glfw.cpp.i
 
 CMakeFiles/demo.dir/imgui/imgui_impl_glfw.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/demo.dir/imgui/imgui_impl_glfw.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/imgui/imgui_impl_glfw.cpp -o CMakeFiles/demo.dir/imgui/imgui_impl_glfw.cpp.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/imgui/imgui_impl_glfw.cpp -o CMakeFiles/demo.dir/imgui/imgui_impl_glfw.cpp.s
 
 # Object files for target demo
 demo_OBJECTS = \
@@ -417,10 +417,10 @@ demo: CMakeFiles/demo.dir/imgui/imgui_impl_glfw.cpp.o
 demo: CMakeFiles/demo.dir/build.make
 demo: /opt/homebrew/lib/libglfw.3.4.dylib
 demo: CMakeFiles/demo.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/Cassian/School_Local/CMPM_123/Week6/chess-base/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Linking CXX executable demo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Linking CXX executable demo"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/demo.dir/link.txt --verbose=$(VERBOSE)
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying resources to runtime output dir"
-	/opt/homebrew/bin/cmake -E copy_directory /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/resources /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/build/resources
+	/opt/homebrew/bin/cmake -E copy_directory /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/resources /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build/resources
 
 # Rule to build all files generated by this target.
 CMakeFiles/demo.dir/build: demo
@@ -431,6 +431,6 @@ CMakeFiles/demo.dir/clean:
 .PHONY : CMakeFiles/demo.dir/clean
 
 CMakeFiles/demo.dir/depend:
-	cd /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/Cassian/School_Local/CMPM_123/Week6/chess-base /Users/Cassian/School_Local/CMPM_123/Week6/chess-base /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/build /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/build /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/build/CMakeFiles/demo.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build/CMakeFiles/demo.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/demo.dir/depend
 

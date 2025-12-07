@@ -7,8 +7,8 @@
 	CompilerVersion="15.0.0.15000309"
 	OSName="macOS"
 	Hostname="Cassians-Laptop.local"
-	OSRelease="26.0.1"
-	OSVersion="25A362"
+	OSRelease="26.1"
+	OSVersion="25B78"
 	OSPlatform="arm64"
 	Is64Bits="1"
 	VendorString="Apple"
@@ -19,17 +19,17 @@
 	ProcessorCacheSize="131072"
 	NumberOfLogicalCPU="8"
 	NumberOfPhysicalCPU="8"
-	TotalVirtualMemory="4096"
+	TotalVirtualMemory="8192"
 	TotalPhysicalMemory="8192"
 	LogicalProcessorsPerPhysical="8"
 	ProcessorClockFrequency="0"
 	>
 	<Testing>
-		<StartDateTime>Nov 15 18:10 PST</StartDateTime>
-		<StartTestTime>1763259010</StartTestTime>
+		<StartDateTime>Dec 07 14:37 PST</StartDateTime>
+		<StartTestTime>1765147072</StartTestTime>
 		<TestList/>
-		<EndDateTime>Nov 15 18:10 PST</EndDateTime>
-		<EndTestTime>1763259010</EndTestTime>
+		<EndDateTime>Dec 07 14:37 PST</EndDateTime>
+		<EndTestTime>1765147072</EndTestTime>
 		<ElapsedMinutes>0</ElapsedMinutes>
 	</Testing>
 </Site>

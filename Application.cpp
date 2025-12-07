@@ -30,6 +30,7 @@ namespace ClassGame {
         void RenderGame() 
         {
                 ImGui::DockSpaceOverViewport();
+                ImGui::GetIO().ConfigWindowsMoveFromTitleBarOnly = true;
 
                 //ImGui::ShowDemoWindow();
 

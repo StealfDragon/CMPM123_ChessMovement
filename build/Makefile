@@ -57,10 +57,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/Cassian/School_Local/CMPM_123/Week6/chess-base
+CMAKE_SOURCE_DIR = /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/build
+CMAKE_BINARY_DIR = /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -78,7 +78,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Run CPack packaging tool for source..."
-	/opt/homebrew/bin/cpack --config ./CPackSourceConfig.cmake /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/build/CPackSourceConfig.cmake
+	/opt/homebrew/bin/cpack --config ./CPackSourceConfig.cmake /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -117,16 +117,16 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/build/CMakeFiles /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build/CMakeFiles /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build/CMakeFiles 0
 .PHONY : all
 
 # The main codegen target
 codegen: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/build/CMakeFiles /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build/CMakeFiles /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 codegen
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build/CMakeFiles 0
 .PHONY : codegen
 
 # The main clean target

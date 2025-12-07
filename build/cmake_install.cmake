@@ -1,4 +1,4 @@
-# Install script for directory: /Users/Cassian/School_Local/CMPM_123/Week6/chess-base
+# Install script for directory: /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,7 +40,7 @@ endif()
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/Users/Cassian/School_Local/CMPM_123/Week6/chess-base/build/install_local_manifest.txt"
+  file(WRITE "/Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
 if(CMAKE_INSTALL_COMPONENT)
@@ -56,6 +56,6 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/Users/Cassian/School_Local/CMPM_123/Week6/chess-base/build/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "/Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

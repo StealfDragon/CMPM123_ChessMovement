@@ -5,6 +5,47 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "Bitboard.h"
+#include "ChessHelpers.h"
+#include <cstdint>
+
+// Helper: mask for a square index
+inline uint64_t SquareMask(int idx) { return 1ULL << idx; }
+
+// Helpers: get file and rank of square index (0..63)
+inline int SquareFile(int sq) { return sq % 8; }
+inline int SquareRank(int sq) { return sq / 8; }
+inline bool SquareValid(int sq) { return sq >= 0 && sq < 64; }
+
+// pop least-significant bit from uint64_t and return its index (-1 if zero)
+static inline int pop_lsb(uint64_t &bb) {
+    if (bb == 0) return -1;
+#if defined(_MSC_VER) && !defined(__clang__)
+    unsigned long idx;
+    _BitScanForward64(&idx, bb);
+    bb &= bb - 1;
+    return (int)idx;
+#else
+    int idx = __builtin_ctzll(bb);
+    bb &= bb - 1;
+    return idx;
+#endif
+}
+
+// Convert your BitboardElement to raw uint64_t quickly
+static inline uint64_t bb_get(const BitBoard &b) { return b.getData(); }
+static inline void bb_set(BitBoard &b, uint64_t v) { b.setData(v); }
+
+// Test "is white" for a Bit (gameTag < 128 = white)
+static inline bool isWhitePiece(const Bit* bit) { return bit->gameTag() < 128; }
+static inline bool isBlackPiece(const Bit* bit) { return bit->gameTag() >= 128; }
+
+// Helper to convert a ChessSquare* to index 0..63
+static inline int squareIndexFromSquare(const ChessSquare* sq) {
+    if (!sq) return -1;
+
+    return sq->getSquareIndex();
+}
 
 Chess::Chess()
 {
@@ -39,6 +80,7 @@ Bit* Chess::PieceForPlayer(const int playerNumber, ChessPiece piece)
     bit->LoadTextureFromFile(spritePath.c_str());
     bit->setOwner(getPlayerAt(playerNumber));
     bit->setSize(pieceSize, pieceSize);
+    bit->setGameTag((playerNumber == 0 ? 0 : 128) + piece);
 
     return bit;
 }
@@ -107,15 +149,33 @@ bool Chess::actionForEmptyHolder(BitHolder &holder)
 bool Chess::canBitMoveFrom(Bit &bit, BitHolder &src)
 {
     // need to implement friendly/unfriendly in bit so for now this hack
-    int currentPlayer = getCurrentPlayer()->playerNumber() * 128;
-    int pieceColor = bit.gameTag() & 128;
-    if (pieceColor == currentPlayer) return true;
-    return false;
+    Player* cur = getCurrentPlayer();
+    if (!cur) return false;
+    int curPlayerNumber = cur->playerNumber(); // 0 or 1
+
+    bool pieceIsWhite = bit.gameTag() < 128;
+    if (curPlayerNumber == 0 && !pieceIsWhite) return false; // white to move, piece must be white
+    if (curPlayerNumber == 1 && pieceIsWhite)  return false; // black to move, piece must be black
+
+    return true;
 }
 
 bool Chess::canBitMoveFromTo(Bit &bit, BitHolder &src, BitHolder &dst)
 {
-    return true;
+    ChessSquare* fromSq = dynamic_cast<ChessSquare*>(&src);
+    ChessSquare* toSq   = dynamic_cast<ChessSquare*>(&dst);
+    if (!fromSq || !toSq) return false;
+
+    // Build the full move list for the side to move, then check membership.
+    auto allMoves = GenerateMoves();
+
+    int fromIndex = fromSq->getSquareIndex();
+    int toIndex = toSq->getSquareIndex();
+
+    for (const Move &m : allMoves) {
+        if (m.startSquare == fromIndex && m.targetSquare == toIndex) return true;
+    }
+    return false;
 }
 
 void Chess::stopGame()
@@ -174,4 +234,146 @@ void Chess::setStateString(const std::string &s)
             square->setBit(nullptr);
         }
     });
+}
+
+std::vector<Move> Chess::GenerateMoves() {
+    std::vector<Move> moves;
+    moves.reserve(64);
+
+    // Build occupancy bitboards from the grid
+    BitBoard whiteBB(0), blackBB(0), allBB(0);
+
+    _grid->forEachSquare([&](ChessSquare* square, int x, int y) {
+        Bit* b = square->bit();
+        if (!b) return;
+        int idx = square->getSquareIndex();
+        if (b->gameTag() < 128) {
+            whiteBB |= SquareMask(idx);
+        } else {
+            blackBB |= SquareMask(idx);
+        }
+        allBB |= SquareMask(idx);
+    });
+
+    // Which side to move? player 0 -> white, player 1 -> black
+    Player* cur = getCurrentPlayer();
+    if (!cur) return moves;
+    bool whiteToMove = (cur->playerNumber() == 0);
+
+    // iterate all squares; generate moves only for pieces of the moving side
+    _grid->forEachSquare([&](ChessSquare* square, int x, int y) {
+        Bit* b = square->bit();
+        if (!b) return;
+
+        bool pieceIsWhite = b->gameTag() < 128;
+        if (whiteToMove != pieceIsWhite) return; // skip opponent pieces
+
+        int fromIdx = square->getSquareIndex();
+        int fromFile = SquareFile(fromIdx);
+        int fromRank = SquareRank(fromIdx);
+        int tag = b->gameTag() % 128; // piece id (1..6) ignoring color
+
+        uint64_t wmask = bb_get(whiteBB);
+        uint64_t bmask = bb_get(blackBB);
+        uint64_t omask = bb_get(allBB);
+
+        // Helper lambda to push move only if destination not occupied by friendly
+        auto tryAddMove = [&](int toIdx) {
+            if (!SquareValid(toIdx)) return;
+            uint64_t m = SquareMask(toIdx);
+            // friendly piece block?
+            if (pieceIsWhite) {
+                if (wmask & m) return;
+            } else {
+                if (bmask & m) return;
+            }
+            moves.emplace_back(fromIdx, toIdx);
+        };
+
+        // Pawn
+        if (tag == Pawn) {
+            if (pieceIsWhite) {
+                // single push
+                int to = fromIdx + 8;
+                if (SquareValid(to) && !(omask & SquareMask(to))) {
+                    moves.emplace_back(fromIdx, to);
+                    // double push from rank 2 (rank index 1)
+                    if (fromRank == 1) {
+                        int to2 = fromIdx + 16;
+                        if (SquareValid(to2) && !(omask & SquareMask(to2))) {
+                            moves.emplace_back(fromIdx, to2);
+                        }
+                    }
+                }
+                // captures
+                if (fromFile > 0) {
+                    int cap = fromIdx + 7;
+                    if (SquareValid(cap) && (bmask & SquareMask(cap))) moves.emplace_back(fromIdx, cap);
+                }
+                if (fromFile < 7) {
+                    int cap = fromIdx + 9;
+                    if (SquareValid(cap) && (bmask & SquareMask(cap))) moves.emplace_back(fromIdx, cap);
+                }
+            } else { // black pawn
+                int to = fromIdx - 8;
+                if (SquareValid(to) && !(omask & SquareMask(to))) {
+                    moves.emplace_back(fromIdx, to);
+                    // double push from rank 7 (rank index 6)
+                    if (fromRank == 6) {
+                        int to2 = fromIdx - 16;
+                        if (SquareValid(to2) && !(omask & SquareMask(to2))) {
+                            moves.emplace_back(fromIdx, to2);
+                        }
+                    }
+                }
+                // captures
+                if (fromFile > 0) {
+                    int cap = fromIdx - 9;
+                    if (SquareValid(cap) && (wmask & SquareMask(cap))) moves.emplace_back(fromIdx, cap);
+                }
+                if (fromFile < 7) {
+                    int cap = fromIdx - 7;
+                    if (SquareValid(cap) && (wmask & SquareMask(cap))) moves.emplace_back(fromIdx, cap);
+                }
+            }
+        }
+        // Knight
+        else if (tag == Knight) {
+            constexpr int kNOff[8] = { +17, +15, +10, +6, -6, -10, -15, -17 };
+            for (int off : kNOff) {
+                int to = fromIdx + off;
+                if (!SquareValid(to)) continue;
+                // file-check: valid knight moves never change file by more than 2
+                int tf = SquareFile(to);
+                if (std::abs(fromFile - tf) > 2) continue;
+                // don't capture friendly
+                if (pieceIsWhite) {
+                    if (wmask & SquareMask(to)) continue;
+                } else {
+                    if (bmask & SquareMask(to)) continue;
+                }
+                moves.emplace_back(fromIdx, to);
+            }
+        }
+        // King
+        else if (tag == King) {
+            constexpr int kKOff[8] = { +1, -1, +8, -8, +9, +7, -9, -7 };
+            for (int off : kKOff) {
+                int to = fromIdx + off;
+                if (!SquareValid(to)) continue;
+                // king cannot wrap files more than 1
+                int tf = SquareFile(to);
+                if (std::abs(fromFile - tf) > 1) continue;
+                // block by friendly
+                if (pieceIsWhite) {
+                    if (wmask & SquareMask(to)) continue;
+                } else {
+                    if (bmask & SquareMask(to)) continue;
+                }
+                moves.emplace_back(fromIdx, to);
+            }
+        }
+
+    });
+    return moves;
 }

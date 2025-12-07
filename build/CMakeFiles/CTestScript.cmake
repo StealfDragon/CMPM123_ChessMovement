@@ -5,8 +5,8 @@
 cmake_minimum_required(VERSION 4.1.2)
 
 # CTest Start Step
-set(CTEST_SOURCE_DIRECTORY "/Users/Cassian/School_Local/CMPM_123/Week6/chess-base")
-set(CTEST_BINARY_DIRECTORY "/Users/Cassian/School_Local/CMPM_123/Week6/chess-base/build")
+set(CTEST_SOURCE_DIRECTORY "/Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement")
+set(CTEST_BINARY_DIRECTORY "/Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build")
 
 # CTest Update Step
 set(CTEST_UPDATE_COMMAND "/opt/homebrew/bin/git")

@@ -5,7 +5,7 @@
 #endif
 #include <iostream>
 
-enum ChessPiece
+/* enum ChessPiece
 {
     NoPiece,
     Pawn,
@@ -14,7 +14,7 @@ enum ChessPiece
     Rook,
     Queen,
     King
-};
+}; */
 
 class BitboardElement {
   public:
@@ -65,6 +65,49 @@ class BitboardElement {
         std::cout << std::flush;
     }
 
+    BitboardElement& operator|=(const BitboardElement& other) {
+        _data |= other._data;
+        return *this;
+    }
+
+    BitboardElement& operator&=(const BitboardElement& other) {
+        _data &= other._data;
+        return *this;
+    }
+
+    BitboardElement& operator&=(uint64_t mask) {
+        _data &= mask;
+        return *this;
+    }
+
+    BitboardElement operator|(uint64_t mask) const {
+        return BitboardElement(_data | mask);
+    }
+
+    BitboardElement operator|(const BitboardElement& other) const {
+        return BitboardElement(_data | other._data);
+    }
+
+    BitboardElement operator&(uint64_t mask) const {
+        return BitboardElement(_data & mask);
+    }
+
+    BitboardElement operator&(const BitboardElement& other) const {
+        return BitboardElement(_data & other._data);
+    }
+
+    // Return index of least significant set bit
+    int firstBit() const {
+        if (_data == 0) return -1;
+    #if defined(_MSC_VER) && !defined(__clang__)
+        unsigned long index;
+        _BitScanForward64(&index, _data);
+        return index;
+    #else
+        return __builtin_ffsll(_data) - 1;
+    #endif
+    }
+
 private:
     uint64_t    _data;
 
@@ -96,3 +139,5 @@ struct BitMove {
                piece == other.piece;
     }
 };
+
+using BitBoard = BitboardElement;

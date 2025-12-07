@@ -53,10 +53,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/Cassian/School_Local/CMPM_123/Week6/chess-base
+CMAKE_SOURCE_DIR = /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/build
+CMAKE_BINARY_DIR = /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build
 
 # Utility rule file for ContinuousUpdate.
 
@@ -85,6 +85,6 @@ CMakeFiles/ContinuousUpdate.dir/clean:
 .PHONY : CMakeFiles/ContinuousUpdate.dir/clean
 
 CMakeFiles/ContinuousUpdate.dir/depend:
-	cd /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/Cassian/School_Local/CMPM_123/Week6/chess-base /Users/Cassian/School_Local/CMPM_123/Week6/chess-base /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/build /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/build /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/build/CMakeFiles/ContinuousUpdate.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build/CMakeFiles/ContinuousUpdate.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/ContinuousUpdate.dir/depend
 
