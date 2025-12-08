@@ -3,6 +3,7 @@
 #include "BitHolder.h"
 #include "Turn.h"
 #include "../Application.h"
+#include "Chess.h"
 
 Game::Game()
 {
@@ -233,6 +234,12 @@ void Game::drawFrame()
 void Game::bitMovedFromTo(Bit &bit, BitHolder &src, BitHolder &dst)
 {
 	endTurn();
+
+    Chess* chess = dynamic_cast<Chess*>(this);
+    if (chess && chess->gameHasAI() && chess->getCurrentPlayer()->isAIPlayer())
+    {
+        chess->makeAIMove(3); // depth 3
+    }
 }
 
 Bit *Game::bitToPlaceInHolder(BitHolder &holder)

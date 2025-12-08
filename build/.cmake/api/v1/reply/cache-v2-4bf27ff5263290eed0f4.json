@@ -67,7 +67,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build"
+			"value" : "/Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -507,7 +507,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build/CMakeFiles/pkgRedirects"
+			"value" : "/Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/build/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -579,7 +579,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement"
+			"value" : "/Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning"
 		},
 		{
 			"name" : "CMAKE_INSTALL_NAME_TOOL",
@@ -1803,7 +1803,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build"
+			"value" : "/Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/build"
 		},
 		{
 			"name" : "tictactoe_IS_TOP_LEVEL",
@@ -1827,7 +1827,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement"
+			"value" : "/Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning"
 		}
 	],
 	"kind" : "cache",

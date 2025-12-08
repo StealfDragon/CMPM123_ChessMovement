@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/demo.dir/classes/Checkers.cpp.o.d"
   "CMakeFiles/demo.dir/classes/Chess.cpp.o"
   "CMakeFiles/demo.dir/classes/Chess.cpp.o.d"
+  "CMakeFiles/demo.dir/classes/ChessAI.cpp.o"
+  "CMakeFiles/demo.dir/classes/ChessAI.cpp.o.d"
   "CMakeFiles/demo.dir/classes/ChessSquare.cpp.o"
   "CMakeFiles/demo.dir/classes/ChessSquare.cpp.o.d"
   "CMakeFiles/demo.dir/classes/Connect4.cpp.o"

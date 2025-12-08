@@ -4,8 +4,8 @@
 
 
 # Configuration directories and files
-SourceDirectory: /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement
-BuildDirectory: /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build
+SourceDirectory: /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning
+BuildDirectory: /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/build
 
 # Where to place the cost data store
 CostDataFile: 
@@ -27,7 +27,7 @@ SubmitInactivityTimeout:
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "/opt/homebrew/bin/cmake" "/Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement"
+ConfigureCommand: "/opt/homebrew/bin/cmake" "/Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning"
 MakeCommand: /opt/homebrew/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}"
 DefaultCTestConfigurationType: Release
 

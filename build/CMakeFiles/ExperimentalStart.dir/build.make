@@ -53,10 +53,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement
+CMAKE_SOURCE_DIR = /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build
+CMAKE_BINARY_DIR = /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/build
 
 # Utility rule file for ExperimentalStart.
 
@@ -85,6 +85,6 @@ CMakeFiles/ExperimentalStart.dir/clean:
 .PHONY : CMakeFiles/ExperimentalStart.dir/clean
 
 CMakeFiles/ExperimentalStart.dir/depend:
-	cd /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build/CMakeFiles/ExperimentalStart.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/build /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/build /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/build/CMakeFiles/ExperimentalStart.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/ExperimentalStart.dir/depend
 

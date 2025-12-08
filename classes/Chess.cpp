@@ -8,6 +8,7 @@
 #include "Bitboard.h"
 #include "ChessHelpers.h"
 #include <cstdint>
+#include "ChessAI.h"
 
 // Helper: mask for a square index
 inline uint64_t SquareMask(int idx) { return 1ULL << idx; }
@@ -50,10 +51,15 @@ static inline int squareIndexFromSquare(const ChessSquare* sq) {
 Chess::Chess()
 {
     _grid = new Grid(8, 8);
+    _ai = new ChessAI(this);
+
+    for (int i = 0; i < 64; ++i) _boardArray[i] = 0;
+    _whiteToMoveInternal = true;
 }
 
 Chess::~Chess()
 {
+    delete _ai;
     delete _grid;
 }
 
@@ -93,6 +99,8 @@ void Chess::setUpBoard()
 
     _grid->initializeChessSquares(pieceSize, "boardsquare.png");
     FENtoBoard("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR");
+
+    setAIPlayer(1);
 
     startGame();
 }
@@ -238,142 +246,298 @@ void Chess::setStateString(const std::string &s)
 
 std::vector<Move> Chess::GenerateMoves() {
     std::vector<Move> moves;
-    moves.reserve(64);
+    moves.reserve(128);
 
-    // Build occupancy bitboards from the grid
-    BitBoard whiteBB(0), blackBB(0), allBB(0);
+    // Choose whether to use internal board (if internal inited) or grid:
+    bool useInternal = true;
+    // If internal board is all zeros then fall back to grid
+    bool anyPiece = false;
+    for (int i=0;i<64;i++) if (_boardArray[i] != 0) { anyPiece = true; break; }
+    if (!anyPiece) useInternal = false;
 
-    _grid->forEachSquare([&](ChessSquare* square, int x, int y) {
-        Bit* b = square->bit();
-        if (!b) return;
-        int idx = square->getSquareIndex();
-        if (b->gameTag() < 128) {
-            whiteBB |= SquareMask(idx);
+    auto pieceAt = [&](int idx)->int {
+        if (useInternal) return _boardArray[idx];
+        ChessSquare* s = _grid->getSquareByIndex(idx);
+        if (!s) return 0;
+        Bit* b = s->bit();
+        return b ? b->gameTag() : 0;
+    };
+
+    auto pushMove = [&](int from, int to) {
+        Move m;
+        m.startSquare = from;
+        m.targetSquare = to;
+        moves.push_back(m);
+    };
+
+    // Iterate board squares
+    for (int sq = 0; sq < 64; ++sq)
+    {
+        int tag = pieceAt(sq);
+        if (tag == 0) continue;
+        bool white = tag < 128;
+        int pid = tag % 128;
+        // Respect side-to-move: if using internal board, consult _whiteToMoveInternal
+        if (useInternal) {
+            if (_whiteToMoveInternal != white) continue;
         } else {
-            blackBB |= SquareMask(idx);
-        }
-        allBB |= SquareMask(idx);
-    });
-
-    // Which side to move? player 0 -> white, player 1 -> black
-    Player* cur = getCurrentPlayer();
-    if (!cur) return moves;
-    bool whiteToMove = (cur->playerNumber() == 0);
-
-    // iterate all squares; generate moves only for pieces of the moving side
-    _grid->forEachSquare([&](ChessSquare* square, int x, int y) {
-        Bit* b = square->bit();
-        if (!b) return;
-
-        bool pieceIsWhite = b->gameTag() < 128;
-        if (whiteToMove != pieceIsWhite) return; // skip opponent pieces
-
-        int fromIdx = square->getSquareIndex();
-        int fromFile = SquareFile(fromIdx);
-        int fromRank = SquareRank(fromIdx);
-        int tag = b->gameTag() % 128; // piece id (1..6) ignoring color
-
-        uint64_t wmask = bb_get(whiteBB);
-        uint64_t bmask = bb_get(blackBB);
-        uint64_t omask = bb_get(allBB);
-
-        // Helper lambda to push move only if destination not occupied by friendly
-        auto tryAddMove = [&](int toIdx) {
-            if (!SquareValid(toIdx)) return;
-            uint64_t m = SquareMask(toIdx);
-            // friendly piece block?
-            if (pieceIsWhite) {
-                if (wmask & m) return;
-            } else {
-                if (bmask & m) return;
+            Player* cur = getCurrentPlayer();
+            if (cur) {
+                bool whiteToMove = cur->playerNumber() == 0;
+                if (whiteToMove != white) continue;
             }
-            moves.emplace_back(fromIdx, toIdx);
+        }
+
+        int file = SquareFile(sq);
+        int rank = SquareRank(sq);
+
+        auto isFriendly = [&](int idx)->bool {
+            int t = pieceAt(idx);
+            if (t == 0) return false;
+            return (t < 128) == white;
+        };
+        auto isEnemy = [&](int idx)->bool {
+            int t = pieceAt(idx);
+            if (t == 0) return false;
+            return (t < 128) != white;
         };
 
         // Pawn
-        if (tag == Pawn) {
-            if (pieceIsWhite) {
-                // single push
-                int to = fromIdx + 8;
-                if (SquareValid(to) && !(omask & SquareMask(to))) {
-                    moves.emplace_back(fromIdx, to);
-                    // double push from rank 2 (rank index 1)
-                    if (fromRank == 1) {
-                        int to2 = fromIdx + 16;
-                        if (SquareValid(to2) && !(omask & SquareMask(to2))) {
-                            moves.emplace_back(fromIdx, to2);
-                        }
+        if (pid == Pawn) {
+            if (white) {
+                int one = sq + 8;
+                if (SquareValid(one) && pieceAt(one) == 0) {
+                    pushMove(sq, one);
+                    // double from rank 1
+                    if (rank == 1) {
+                        int two = sq + 16;
+                        if (SquareValid(two) && pieceAt(two) == 0) pushMove(sq, two);
                     }
                 }
                 // captures
-                if (fromFile > 0) {
-                    int cap = fromIdx + 7;
-                    if (SquareValid(cap) && (bmask & SquareMask(cap))) moves.emplace_back(fromIdx, cap);
-                }
-                if (fromFile < 7) {
-                    int cap = fromIdx + 9;
-                    if (SquareValid(cap) && (bmask & SquareMask(cap))) moves.emplace_back(fromIdx, cap);
-                }
-            } else { // black pawn
-                int to = fromIdx - 8;
-                if (SquareValid(to) && !(omask & SquareMask(to))) {
-                    moves.emplace_back(fromIdx, to);
-                    // double push from rank 7 (rank index 6)
-                    if (fromRank == 6) {
-                        int to2 = fromIdx - 16;
-                        if (SquareValid(to2) && !(omask & SquareMask(to2))) {
-                            moves.emplace_back(fromIdx, to2);
-                        }
+                if (file > 0) { int c = sq + 7; if (SquareValid(c) && isEnemy(c)) pushMove(sq, c); }
+                if (file < 7) { int c = sq + 9; if (SquareValid(c) && isEnemy(c)) pushMove(sq, c); }
+            } else { // black
+                int one = sq - 8;
+                if (SquareValid(one) && pieceAt(one) == 0) {
+                    pushMove(sq, one);
+                    if (rank == 6) {
+                        int two = sq - 16;
+                        if (SquareValid(two) && pieceAt(two) == 0) pushMove(sq, two);
                     }
                 }
-                // captures
-                if (fromFile > 0) {
-                    int cap = fromIdx - 9;
-                    if (SquareValid(cap) && (wmask & SquareMask(cap))) moves.emplace_back(fromIdx, cap);
-                }
-                if (fromFile < 7) {
-                    int cap = fromIdx - 7;
-                    if (SquareValid(cap) && (wmask & SquareMask(cap))) moves.emplace_back(fromIdx, cap);
-                }
+                if (file > 0) { int c = sq - 9; if (SquareValid(c) && isEnemy(c)) pushMove(sq, c); }
+                if (file < 7) { int c = sq - 7; if (SquareValid(c) && isEnemy(c)) pushMove(sq, c); }
             }
         }
         // Knight
-        else if (tag == Knight) {
+        else if (pid == Knight) {
             constexpr int kNOff[8] = { +17, +15, +10, +6, -6, -10, -15, -17 };
             for (int off : kNOff) {
-                int to = fromIdx + off;
+                int to = sq + off;
                 if (!SquareValid(to)) continue;
-                // file-check: valid knight moves never change file by more than 2
                 int tf = SquareFile(to);
-                if (std::abs(fromFile - tf) > 2) continue;
-                // don't capture friendly
-                if (pieceIsWhite) {
-                    if (wmask & SquareMask(to)) continue;
-                } else {
-                    if (bmask & SquareMask(to)) continue;
-                }
-                moves.emplace_back(fromIdx, to);
+                if (std::abs(file - tf) > 2) continue;
+                if (isFriendly(to)) continue;
+                pushMove(sq, to);
             }
         }
         // King
-        else if (tag == King) {
+        else if (pid == King) {
             constexpr int kKOff[8] = { +1, -1, +8, -8, +9, +7, -9, -7 };
             for (int off : kKOff) {
-                int to = fromIdx + off;
+                int to = sq + off;
                 if (!SquareValid(to)) continue;
-                // king cannot wrap files more than 1
                 int tf = SquareFile(to);
-                if (std::abs(fromFile - tf) > 1) continue;
-                // block by friendly
-                if (pieceIsWhite) {
-                    if (wmask & SquareMask(to)) continue;
-                } else {
-                    if (bmask & SquareMask(to)) continue;
-                }
-                moves.emplace_back(fromIdx, to);
+                if (std::abs(file - tf) > 1) continue;
+                if (isFriendly(to)) continue;
+                pushMove(sq, to);
             }
         }
+        // Bishop / Rook / Queen (ray attacks)
+        else {
+            auto ray = [&](int dir) {
+                int cur = sq;
+                while (true) {
+                    int f = SquareFile(cur);
+                    int r = SquareRank(cur);
+                    int n = cur + dir;
+                    if (!SquareValid(n)) break;
+                    // file wrap checks for left/right moves
+                    int nf = SquareFile(n);
+                    if (std::abs(nf - f) > 2 && (dir == 1 || dir == -1 || dir == 7 || dir == -9 || dir == 9 || dir == -7)) {
+                        // wrap; break (defensive)
+                        break;
+                    }
+                    if (isFriendly(n)) break;
+                    pushMove(sq, n);
+                    if (isEnemy(n)) break;
+                    cur = n;
+                }
+            };
+            if (pid == Bishop || pid == Queen) {
+                // bishop directions: +9, +7, -7, -9 (on 0..63)
+                ray(+9); ray(+7); ray(-7); ray(-9);
+            }
+            if (pid == Rook || pid == Queen) {
+                // rook directions: +1, -1, +8, -8
+                ray(+1); ray(-1); ray(+8); ray(-8);
+            }
+        }
+    }
 
-    });
     return moves;
+}
+
+void Chess::buildInternalBoardFromGrid()
+{
+    for (int i = 0; i < 64; ++i)
+        _boardArray[i] = 0;
+
+    _grid->forEachSquare([&](ChessSquare* square, int, int) {
+        int idx = square->getSquareIndex();
+        if (square->bit())
+            _boardArray[idx] = square->bit()->gameTag();
+    });
+
+    Player* cur = getCurrentPlayer();
+    _whiteToMoveInternal = (cur && cur->playerNumber() == 0);
+}
+
+// sync internal board back to the grid (after AI chooses move)
+void Chess::syncGridFromInternalBoard()
+{
+    for (int i = 0; i < 64; ++i)
+    {
+        ChessSquare* sq = _grid->getSquareByIndex(i);
+        int tag = _boardArray[i];
+        // Destroy whatever is in square and replace with correct piece
+        sq->destroyBit();
+        if (tag != 0)
+        {
+            // FIX START
+            // Tag < 128 is White (Player 0). Tag >= 128 is Black (Player 1).
+            int playerNumber = tag < 128 ? 0 : 1; 
+            int pieceId = tag % 128;
+            
+            // Pass playerNumber, not "isWhite" boolean logic
+            Bit* b = PieceForPlayer(playerNumber, (ChessPiece)pieceId);
+            // FIX END
+            
+            sq->setBit(b);
+            b->setParent(sq);
+            b->moveTo(sq->getPosition());
+            b->setPickedUp(false);
+            b->setGameTag(tag);
+        }
+    }
+}
+
+int Chess::applyMoveToInternalBoard(const Move &m)
+{
+    int from = m.startSquare;
+    int to   = m.targetSquare;
+
+    int captured = _boardArray[to];
+    _boardArray[to]   = _boardArray[from];
+    _boardArray[from] = 0;
+    
+    // FIX: Toggle the internal turn so the next depth of recursion 
+    // generates moves for the opponent.
+    _whiteToMoveInternal = !_whiteToMoveInternal; 
+
+    return captured;
+}
+
+void Chess::undoMoveInInternalBoard(const Move &m, int captured)
+{
+    int from = m.startSquare;
+    int to   = m.targetSquare;
+
+    _boardArray[from] = _boardArray[to];
+    _boardArray[to]   = captured;
+
+    // FIX: Toggle it back when undoing
+    _whiteToMoveInternal = !_whiteToMoveInternal;
+}
+
+int Chess::materialScore()
+{
+    int whiteScore = 0;
+    int blackScore = 0;
+    for (int i = 0; i < 64; ++i)
+    {
+        int tag = _boardArray[i];
+        if (tag == 0) continue;
+        bool white = tag < 128;
+        int id = tag % 128;
+        int val = 0;
+        switch (id) {
+            case Pawn: val = VAL_PAWN; break;
+            case Knight: val = VAL_KNIGHT; break;
+            case Bishop: val = VAL_BISHOP; break;
+            case Rook: val = VAL_ROOK; break;
+            case Queen: val = VAL_QUEEN; break;
+            case King: val = VAL_KING; break;
+            default: val = 0; break;
+        }
+        if (white) whiteScore += val; else blackScore += val;
+    }
+    return whiteScore - blackScore;
+}
+
+void Chess::makeAIMove(int depth)
+{
+    if (!_ai) return;
+
+    // 1. Check turn and player type
+    Player* cur = getCurrentPlayer();
+    if (!cur || !cur->isAIPlayer()) return;
+
+    // 2. Sync internal board so AI thinks based on current reality
+    buildInternalBoardFromGrid();
+
+    // 3. Find the best move
+    Move bestMove = _ai->findBestMove(depth);
+
+    // Safety: If AI returns invalid move, abort
+    if (bestMove.startSquare < 0 || bestMove.targetSquare < 0) return;
+
+    // 4. Update Internal State (for logic)
+    applyMoveToInternalBoard(bestMove);
+
+    // 5. Update Visuals (The "Vanish" Fix)
+    ChessSquare* startSq = _grid->getSquareByIndex(bestMove.startSquare);
+    ChessSquare* endSq   = _grid->getSquareByIndex(bestMove.targetSquare);
+
+    // Safety check: ensure start square actually has a piece
+    Bit* piece = startSq->bit();
+    if (piece) {
+        // A. Handle Capture (Destroy enemy piece if present)
+        if (endSq->bit()) {
+            endSq->destroyBit();
+        }
+
+        // B. CRITICAL: Move the piece visually *before* changing its parent.
+        // This ensures the move uses the piece's current world coordinate context.
+        piece->moveTo(endSq->getPosition());
+        
+        // C. Update the Transform/Parenting
+        piece->setParent(endSq);
+        
+        // D. Update the Logical Pointers (Who holds what)
+        startSq->setBit(nullptr);
+        endSq->setBit(piece);
+
+        // E. Ensure the engine knows the piece is "dropped" and valid
+        piece->setPickedUp(false);
+    }
+    
+    // 6. End the turn
+    endTurn();
+}
+
+bool Chess::gameHasAI()
+{
+	return _gameOptions.AIPlaying;
 }

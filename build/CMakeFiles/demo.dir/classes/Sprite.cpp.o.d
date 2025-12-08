@@ -1,9 +1,9 @@
 CMakeFiles/demo.dir/classes/Sprite.cpp.o: \
-  /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/Sprite.cpp \
-  /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/Sprite.h \
-  /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/Entity.h \
-  /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/../imgui/imgui.h \
-  /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/../imgui/imconfig.h \
+  /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/classes/Sprite.cpp \
+  /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/classes/Sprite.h \
+  /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/classes/Entity.h \
+  /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/classes/../imgui/imgui.h \
+  /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/classes/../imgui/imconfig.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/float.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__config_site \
@@ -90,7 +90,7 @@ CMakeFiles/demo.dir/classes/Sprite.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/malloc/_ptrcheck.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_dev_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_mode_t.h \
-  /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/stb_image.h \
+  /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/classes/stb_image.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdio.h \
@@ -851,4 +851,4 @@ CMakeFiles/demo.dir/classes/Sprite.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/path_iterator.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/recursive_directory_iterator.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/u8path.h \
-  /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/classes/../imgui/imgui_impl_opengl3_loader.h
+  /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/classes/../imgui/imgui_impl_opengl3_loader.h

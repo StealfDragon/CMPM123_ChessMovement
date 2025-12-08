@@ -1,7 +1,7 @@
 CMakeFiles/demo.dir/imgui/imgui_demo.cpp.o: \
-  /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/imgui/imgui_demo.cpp \
-  /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/imgui/imgui.h \
-  /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/imgui/imconfig.h \
+  /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/imgui/imgui_demo.cpp \
+  /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/imgui/imgui.h \
+  /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/imgui/imconfig.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/float.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__config_site \

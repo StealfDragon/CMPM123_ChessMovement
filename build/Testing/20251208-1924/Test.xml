@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Site BuildName="Darwin-clang++"
-	BuildStamp="20251110-0214-Experimental"
+	BuildStamp="20251208-1924-Experimental"
 	Name="Cassians-Laptop.local"
 	Generator="ctest-4.1.2"
 	CompilerName="/usr/bin/clang++"
@@ -25,11 +25,11 @@
 	ProcessorClockFrequency="0"
 	>
 	<Testing>
-		<StartDateTime>Dec 07 14:37 PST</StartDateTime>
-		<StartTestTime>1765147072</StartTestTime>
+		<StartDateTime>Dec 08 14:02 PST</StartDateTime>
+		<StartTestTime>1765231326</StartTestTime>
 		<TestList/>
-		<EndDateTime>Dec 07 14:37 PST</EndDateTime>
-		<EndTestTime>1765147072</EndTestTime>
+		<EndDateTime>Dec 08 14:02 PST</EndDateTime>
+		<EndTestTime>1765231326</EndTestTime>
 		<ElapsedMinutes>0</ElapsedMinutes>
 	</Testing>
 </Site>

@@ -323,8 +323,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "/Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build",
-		"source" : "/Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement"
+		"build" : "/Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/build",
+		"source" : "/Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning"
 	},
 	"version" : 
 	{

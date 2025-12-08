@@ -57,10 +57,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement
+CMAKE_SOURCE_DIR = /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build
+CMAKE_BINARY_DIR = /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -78,7 +78,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Run CPack packaging tool for source..."
-	/opt/homebrew/bin/cpack --config ./CPackSourceConfig.cmake /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build/CPackSourceConfig.cmake
+	/opt/homebrew/bin/cpack --config ./CPackSourceConfig.cmake /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -117,16 +117,16 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build/CMakeFiles /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/build/CMakeFiles /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/build/CMakeFiles 0
 .PHONY : all
 
 # The main codegen target
 codegen: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build/CMakeFiles /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/build/CMakeFiles /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 codegen
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/build/CMakeFiles 0
 .PHONY : codegen
 
 # The main clean target
@@ -650,6 +650,30 @@ classes/Chess.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/classes/Chess.cpp.s
 .PHONY : classes/Chess.cpp.s
 
+classes/ChessAI.o: classes/ChessAI.cpp.o
+.PHONY : classes/ChessAI.o
+
+# target to build an object file
+classes/ChessAI.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/classes/ChessAI.cpp.o
+.PHONY : classes/ChessAI.cpp.o
+
+classes/ChessAI.i: classes/ChessAI.cpp.i
+.PHONY : classes/ChessAI.i
+
+# target to preprocess a source file
+classes/ChessAI.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/classes/ChessAI.cpp.i
+.PHONY : classes/ChessAI.cpp.i
+
+classes/ChessAI.s: classes/ChessAI.cpp.s
+.PHONY : classes/ChessAI.s
+
+# target to generate assembly for a file
+classes/ChessAI.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/classes/ChessAI.cpp.s
+.PHONY : classes/ChessAI.cpp.s
+
 classes/ChessSquare.o: classes/ChessSquare.cpp.o
 .PHONY : classes/ChessSquare.o
 
@@ -1090,6 +1114,9 @@ help:
 	@echo "... classes/Chess.o"
 	@echo "... classes/Chess.i"
 	@echo "... classes/Chess.s"
+	@echo "... classes/ChessAI.o"
+	@echo "... classes/ChessAI.i"
+	@echo "... classes/ChessAI.s"
 	@echo "... classes/ChessSquare.o"
 	@echo "... classes/ChessSquare.i"
 	@echo "... classes/ChessSquare.s"

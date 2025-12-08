@@ -1,7 +1,7 @@
 CMakeFiles/demo.dir/imgui/imgui_draw.cpp.o: \
-  /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/imgui/imgui_draw.cpp \
-  /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/imgui/imgui.h \
-  /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/imgui/imconfig.h \
+  /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/imgui/imgui_draw.cpp \
+  /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/imgui/imgui.h \
+  /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/imgui/imconfig.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/float.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__config_site \
@@ -88,7 +88,7 @@ CMakeFiles/demo.dir/imgui/imgui_draw.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/malloc/_ptrcheck.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_dev_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_mode_t.h \
-  /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/imgui/imgui_internal.h \
+  /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/imgui/imgui_internal.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdio.h \
@@ -243,5 +243,5 @@ CMakeFiles/demo.dir/imgui/imgui_draw.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/_limits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/syslimits.h \
-  /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/imgui/imstb_rectpack.h \
-  /Users/Cassian/School_Local/CMPM_123/Week6/chess-base/imgui/imstb_truetype.h
+  /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/imgui/imstb_rectpack.h \
+  /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/imgui/imstb_truetype.h

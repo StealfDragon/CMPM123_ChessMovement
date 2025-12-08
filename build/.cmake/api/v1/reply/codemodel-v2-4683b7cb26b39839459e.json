@@ -291,7 +291,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "demo::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-demo-Debug-67722591990bcb8ef40c.json",
+					"jsonFile" : "target-demo-Debug-b286e80188cc34045aba.json",
 					"name" : "demo",
 					"projectIndex" : 0
 				}
@@ -301,8 +301,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build",
-		"source" : "/Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement"
+		"build" : "/Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/build",
+		"source" : "/Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning"
 	},
 	"version" : 
 	{

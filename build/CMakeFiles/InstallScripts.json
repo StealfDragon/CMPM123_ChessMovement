@@ -1,7 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"/Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/build/cmake_install.cmake"
+		"/Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/build/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

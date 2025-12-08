@@ -127,17 +127,11 @@ struct BitMove {
     uint8_t from;
     uint8_t to;
     uint8_t piece;
-    
-    BitMove(int from, int to, ChessPiece piece)
-        : from(from), to(to), piece(piece) { }
-        
-    BitMove() : from(0), to(0), piece(NoPiece) { }
-    
-    bool operator==(const BitMove& other) const {
-        return from == other.from && 
-               to == other.to && 
-               piece == other.piece;
-    }
+
+    BitMove(int f, int t, uint8_t p)
+        : from(f), to(t), piece(p) { }
+
+    BitMove() : from(0), to(0), piece(0) { }
 };
 
 using BitBoard = BitboardElement;

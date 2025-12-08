@@ -1,7 +1,7 @@
 CMakeFiles/demo.dir/classes/Chess.cpp.o: \
-  /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/Chess.cpp \
-  /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/Chess.h \
-  /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/Game.h \
+  /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/classes/Chess.cpp \
+  /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/classes/Chess.h \
+  /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/classes/Game.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__assert \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__config \
@@ -939,21 +939,22 @@ CMakeFiles/demo.dir/classes/Chess.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__charconv/from_chars_result.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__charconv/to_chars.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/future \
-  /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/Player.h \
+  /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/classes/Player.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/map \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__tree \
-  /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/Turn.h \
-  /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/Bit.h \
-  /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/Sprite.h \
-  /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/Entity.h \
-  /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/../imgui/imgui.h \
-  /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/../imgui/imconfig.h \
+  /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/classes/Turn.h \
+  /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/classes/Bit.h \
+  /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/classes/Sprite.h \
+  /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/classes/Entity.h \
+  /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/classes/../imgui/imgui.h \
+  /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/classes/../imgui/imconfig.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/float.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/15.0.0/include/float.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/float.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/assert.h \
-  /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/BitHolder.h \
-  /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/Grid.h \
-  /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/ChessSquare.h \
-  /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/Bitboard.h \
-  /Users/Cassian/School_Local/CMPM_123/Week7/CMPM123_ChessMovement/classes/ChessHelpers.h
+  /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/classes/BitHolder.h \
+  /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/classes/Grid.h \
+  /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/classes/ChessSquare.h \
+  /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/classes/Bitboard.h \
+  /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/classes/ChessHelpers.h \
+  /Users/Cassian/School_Local/CMPM_123/Week10/CMPM123_Chess-AlphaBetaPruning/classes/ChessAI.h
